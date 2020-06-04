@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
 </head>
-
 <body>
     <header>
         <img class="logo" src="./images/logo.svg" alt="Logo">
@@ -43,7 +26,7 @@
                 launch deals.
             </p>
             <form id="form" autocomplete="off">
-                <input type="email" id="email" placeholder="Email Address">
+                <input type="email" name="email" id="email" placeholder="Email Address" aria-required="true">
                 <img id="err-img" class="icon-error" src="./images/icon-error.svg" alt="Error">
                 <button id="button" type="submit" class="btn">
                     <img src="./images/icon-arrow.svg" alt="Arrow Icon">
@@ -52,7 +35,6 @@
             </form>
         </article>
     </main>
-
     <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
