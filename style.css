@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+	--desaturatedRed: hsl(0, 36%, 70%);
+	--softRed: hsl(0, 93%, 68%);
+	--darkGrayishRed: hsl(0, 6%, 24%);
+	--linearGradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--linearGradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.5rem;
+	max-width: 1440px;
+	min-height: 100vh;
+	margin: auto;
+	color: var(--desaturatedRed);
+	font-weight: 400;
+	background-image: var(--linearGradient1);
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.logo {
+	margin: 2em;
+	width: 150px;
+}
+
+.cover-image {
+	display: block;
+	margin: auto;
+}
+
+.article-content {
+	width: min(83.2%, 500px);
+	margin: 0 auto;
+	grid-area: article;
+	text-align: center;
+}
+
+.article-content h1 {
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 4rem;
+	letter-spacing: 0.4em;
+	padding-top: 2.5em;
+}
+
+.article-content h1 span {
+	font-weight: 600;
+	color: var(--darkGrayishRed);
+}
+
+.article-content p {
+	margin-top: 1rem;
+	font-size: 1em;
+	line-height: 2;
+}
+
+form {
+	margin: 2em auto;
+	position: relative;
+}
+
+form input {
+	border-radius: 4em;
+	width: 100%;
+	height: 4em;
+	border: 1px solid hsl(0, 80%, 86%);
+	padding: 0 3em;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+form input:focus,
+form button:focus {
+	outline: none;
+	border: 1px solid hsl(0, 74%, 74%);
+}
+
+form button.btn {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: var(--linearGradient2);
+	border: 0;
+	height: 100%;
+	width: 22%;
+	border-radius: 2em;
+}
+
+.icon-error {
+	position: absolute;
+	top: 30%;
+	right: 25%;
+	display: none;
+}
+
+form p {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	display: none;
+}
+
+.error {
+	display: block;
+}
+
+@media screen and (min-width: 970px) {
+	.cover-image {
+		margin-right: 0;
+		height: 100vh;
+	}
+
+	.logo {
+		width: 160px;
+		position: absolute;
+		margin: unset;
+		left: 11.25%;
+		top: 4.16%;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: 58% 38%;
+		column-gap: 4%;
+		grid-template-areas: "article" "img";
+		background: no-repeat url("./images/bg-pattern-desktop.svg");
+	}
+
+	.article-content {
+		text-align: unset;
+		align-self: center;
+	}
+
+	.article-content h1 {
+		font-size: 6.25rem;
+	}
+}
